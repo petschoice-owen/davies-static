@@ -1,0 +1,124 @@
+//main: ../main.scss
+
+// ------------------------------------------------------------------------------------
+// This file contains all styles related to the top-navigation of the site/application.
+// ------------------------------------------------------------------------------------
+
+.top-navigation {
+    padding: 10px 0;
+    background-color: $brand-color;
+
+    .navbar-collapse {
+        justify-content: flex-end;
+        margin: auto 0 15px;
+    }
+
+    .logo-image {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        max-height: 100px;
+    }
+
+    .navbar .navbar-nav {
+        li:not(:first-child) {
+            margin-left: 35px;
+        }
+
+        a {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            padding: 0;
+            font-family: $font-adelle;
+            font-size: 18px;
+            color: #fff;
+            transition: .25s ease-in-out all;
+
+            &:hover {
+                color: $bright-yellow;
+
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -3px;
+                left: 0;
+                display: flex;
+                width: 0;
+                height: 2px;
+                margin: auto;
+                background-color: $bright-yellow;
+                opacity: 0;
+                transition: .25s ease-in-out all;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 10px;
+
+        .container {
+            max-width: 100%;
+        }
+
+        .logo-image {
+            max-width: 110px;
+            max-height: 70px;
+        }
+
+        .navbar-collapse {
+            margin-bottom: 10px;
+        }
+
+        .navbar .navbar-nav {
+            li:not(:first-child) {
+                margin-left: 25px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 5px 0;
+
+        .logo-image {
+            max-width: 80px;
+            max-height: 50px;
+        }
+
+        .navbar-collapse {
+            margin-bottom: initial;
+        }
+
+        .navbar .navbar-nav {
+            padding-top: 15px;
+
+            li {
+                margin: 0 auto;
+                padding: 10px 0;
+
+                &:not(:first-child) {
+                    margin-left: auto;
+                }
+            }
+
+            a {
+                font-size: 16px;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
