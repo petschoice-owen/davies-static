@@ -5,25 +5,184 @@
 // -----------------------------------------------------------------------------
 
 .page-home {
-    padding: 50px 0;
-    
-    @media (max-width: 1399px) {
+    .featured {
+        padding: 50px 0;
 
+        .wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .wrapper-column {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 50%;
+            padding: 0 20px;
+        }
+
+        .text {
+            h1, h2, h3, h4, h5, h6 {
+                & + p {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .image-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .range {
+        padding: 50px 0;
+        background-color: #fbfaf7;
+
+        .section-title {
+            text-align: center;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .wrapper-column {
+            width: 100%;
+            max-width: 50%;
+            padding: 0 20px;
+        }
+
+        .text {
+            > * + * {
+                margin-top: 15px;
+            }
+        }
+
+        .checklist {
+            padding-left: 50px;
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+            li {
+                position: relative;
+                padding: 20px 0 20px 60px;
+                font-family: $font-adelle-bold;
+                font-size: 26px;
+                color: $brand-color;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    width: 45px;
+                    height: 45px;
+                    background: url(../assets/images/icon-check.png) no-repeat center / contain;
+                }
+
+                & + li {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .button-holder {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+    }
+
+    .testimonials {
+        padding: 50px 0;
+        background-color: $violet;
+
+        .section-title {
+            color: #fff;
+            text-align: center;
+        }
     }
   
     @media (max-width: 1199px) {
-      
+        .range {
+            .checklist li {
+                font-size: 24px;
+            }
+        }
     }
   
     @media (max-width: 991px) {
-      
+        .featured {
+            .wrapper-column {
+                padding: 0 10px;
+            }
+        }
+
+        .range {
+            .wrapper-column {
+                padding: 0 10px;
+            }
+
+            .text {
+                padding-right: 40px;
+                max-width: 60%;
+            }
+
+            .checklist {
+                max-width: 40%;
+            }
+        }
     }
   
     @media (max-width: 767px) {
-      
-    }
-  
-    @media (max-width: 575px) {
-      
+        .featured {
+            .wrapper-column {
+                max-width: 100%;
+            }
+
+            .image {
+                margin-top: 35px;
+            }
+        }
+
+        .range {
+            .wrapper-column {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .text {
+                order: 2;
+                margin-top: 30px;
+            }
+
+            .checklist {
+                order: 1;
+
+                li {
+                    padding: 15px 0 15px 50px;
+                    font-size: 18px;
+    
+                    &::before {
+                        top: 6px;
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
     }
 }

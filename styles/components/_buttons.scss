@@ -4,50 +4,33 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
-.btn-brown {
-    position: relative;
+.button-white-outline {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    padding: 22px 30px;
-    font-weight: 700;
+    padding: 18px 30px 15px;
     font-size: 20px;
+    line-height: 1;
+    font-family: $font-adelle-bold;
+    color: $brand-color;
     text-transform: uppercase;
-    text-align: center;
-    color: #fff;
-    background-color: #96302F;
-    border-radius: 14px;
-    box-shadow: 0 2px 7px 0 rgba(0,0,0,.5);
-    transition: all .35s ease-in-out;
-    
-    @include on-event {
+    background-color: #fff;
+    border: 1px solid $brand-color;
+    border-radius: 0;
+    transition: .35s ease-in-out all;
+
+    &:hover {
         color: #fff;
-        text-decoration: none;
-        background-color: #000;    
-    }
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: 5px;
-        border: 2px solid #fff;
-        border-radius: 10px;
-    }
-
-    @media (max-width: 1439px) {
-        font-size: 15px;
-    }
-
-    @media (max-width: 1199px) {
-        font-size: 14px;
+        background-color: $brand-color;
+        border-color: $brand-color;
     }
 
     @media (max-width: 991px) {
-        padding: 16px 26px;
+        font-size: 18px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 16px 30px 13px;
+        font-size: 16px;
     }
 }

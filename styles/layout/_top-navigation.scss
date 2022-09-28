@@ -91,17 +91,27 @@
     @media (max-width: 767px) {
         padding: 5px 0;
 
+        .container {
+            position: relative;
+        }
+
         .logo-image {
             max-width: 80px;
             max-height: 50px;
         }
 
         .navbar-collapse {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: -15px;
+            z-index: 10;
+            width: calc(100% + 15px);
             margin-bottom: initial;
+            background: $brand-color;
         }
 
         .navbar .navbar-nav {
-            padding-top: 15px;
+            padding: 10px 0;
 
             li {
                 margin: 0 auto;

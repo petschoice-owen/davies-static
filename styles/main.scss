@@ -9,7 +9,7 @@
 // 2. Vendors
 @import
     'vendors/slick.min.css',
-    'vendors/slick-theme.min.css',
+    // 'vendors/slick-theme.min.css',
     'vendors/bootstrap.min.css';
 
 // 3. Base stuff
@@ -21,7 +21,8 @@
 
 // 4. Components
 @import
-    'components/buttons';
+    'components/buttons',
+    'components/slider';
 
 // 5. Layout-related sections
 @import

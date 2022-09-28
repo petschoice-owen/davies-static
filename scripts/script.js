@@ -17,31 +17,45 @@ var windowScrolled = () => {
 }
   
 // slider function
-var customSlider = () => {
-    if ($(".custom-slider")) {
-        $('.custom-slider').slick({
+var slider = () => {
+    if ($(".hero-slider .custom-slider")) {
+        $('.hero-slider .custom-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 3000,
-            dots: false,
+            autoplaySpeed: 5000,
             infinite: true,
-            speed: 1500,
+            speed: 500,
             dots: false,
+            adaptiveHeight: true,
+            // prevArrow: $('.slick-prev'),
+            // nextArrow: $('.slick-next'),
+            swipe: false,
+            fade: true,
+            cssEase: 'linear'
+        });
+    }
+    if ($(".testimonials .custom-slider")) {
+        $('.testimonials .custom-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            infinite: true,
+            speed: 1000,
+            dots: true,
             prevArrow: false,
             nextArrow: false,
             swipe: false,
-            // fade: true,
-            // cssEase: 'linear'
         });
-    }  
+    }
 }
   
 // initialize the functions
 windowScrolled();
   
 $(document).ready(function() {
-    // customSlider();
+    slider();
 });
   
 $(window).resize(function() {

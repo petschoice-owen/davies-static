@@ -5,13 +5,13 @@
 // -----------------------------------------------------------------------------
 
 ::selection {
-    color: #fff;
-    background: #96302f;
+    color: $text-color;
+    background: $violet-highlight;
 }
 
 ::-moz-selection {
-    color: #fff;
-    background: #96302f;
+    color: $text-color;
+    background: $violet-highlight;
 }
 
 
@@ -99,11 +99,17 @@ input[type="text"] {
 
 // container 
 .container {
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
         max-width: 100%;
         padding-right: 15px;
         padding-left: 15px;
     }
+
+    // @media (max-width: 767px) {
+    //     max-width: 100%;
+    //     padding-right: 15px;
+    //     padding-left: 15px;
+    // }
 }
 
 .overlay {
