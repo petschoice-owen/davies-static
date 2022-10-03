@@ -42,11 +42,13 @@ var slider = () => {
             autoplay: true,
             autoplaySpeed: 5000,
             infinite: true,
-            speed: 1000,
+            speed: 800,
             dots: true,
+            adaptiveHeight: true,
             prevArrow: false,
             nextArrow: false,
             swipe: false,
+            fade: true,
         });
     }
 }
