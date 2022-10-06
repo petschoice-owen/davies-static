@@ -11,3 +11,5 @@
 
 ## Project Name: Davies
 * [Home](https://petschoice-owen.github.io/davies-static/index.html)
+* [About](https://petschoice-owen.github.io/davies-static/about.html)
+<!-- * [Stockist](https://petschoice-owen.github.io/davies-static/stockisthtml) -->
