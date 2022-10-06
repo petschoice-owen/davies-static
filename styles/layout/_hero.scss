@@ -1,9 +1,13 @@
 //main: ../main.scss
 
 // ------------------------------------------------------------------------------------
-// This file contains all styles related to the hero section of the site/application.
+// This file contains all styles related to the hero sections of the site/application.
 // ------------------------------------------------------------------------------------
 
-.hero {
-    
+.hero-title {
+    padding: 50px 0;
+
+    @media (max-width: 767px) {
+        padding: 35px 0;
+    }
 }

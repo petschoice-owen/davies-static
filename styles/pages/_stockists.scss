@@ -1,0 +1,22 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the stockists page.
+// -----------------------------------------------------------------------------
+
+.page-stockists {
+    .wrapper-stockist-form {
+        margin-top: 30px;
+    }
+
+    .stockist-form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .text,
+    .form {
+        width: 100%;
+        max-width: 50%;
+    }
+}

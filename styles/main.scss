@@ -22,14 +22,17 @@
 // 4. Components
 @import
     'components/buttons',
-    'components/slider';
+    'components/slider',
+    'components/cta';
 
 // 5. Layout-related sections
 @import
     'layout/top-navigation',
     'layout/footer',
-    'layout/hero';
+    'layout/hero',
+    'layout/content-section';
 
 // 6. Page-specific styles
 @import
-    'pages/home';
+    'pages/home',
+    'pages/stockists';

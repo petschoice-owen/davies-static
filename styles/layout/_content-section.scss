@@ -1,0 +1,51 @@
+//main: ../main.scss
+
+// --------------------------------------------------------------------------------------
+// This file contains all styles related to the content sections of the site/application.
+// --------------------------------------------------------------------------------------
+
+.hero-title + .content-section {
+    padding-top: 0;
+
+    @media (max-width: 767px) {
+        margin-top: -10px;
+    }
+}
+
+.content-section {
+    padding: 50px 0;
+
+    .wrapper {
+        * + * {
+            margin-top: 20px;
+        }
+
+        .image-holder {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        a {
+            font-family: $font-adelle-bold;
+            color: $brand-color;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 35px 0;
+
+        .wrapper {
+            * + * {
+                margin-top: 15px;
+            }
+        }
+    }
+}
