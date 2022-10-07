@@ -8,9 +8,36 @@
     br {
         display: none;
     }
-
-    .form-item + .form-item {
+    
+    .form-item + .form-item,
+    .item-input label + br + span {
         margin-top: 10px;
+    }
+
+    .item-input-row {
+        display: flex;
+        flex-wrap: wrap;
+
+        label + br + span {
+            margin-top: 0;
+        }
+
+        .item-input-column {
+            width: 100%;
+            max-width: 50%;
+
+            &:nth-child(1) {
+                padding-right: 5px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 5px;
+            }
+
+            & + .item-input-column {
+                margin-top: 0;
+            }
+        }
     }
 
     // .required-asterisk {
@@ -50,18 +77,18 @@
             width: 100%;
             max-width: 100%;
             padding: 10px 12px;
-            background-color: $brand-color;
+            background-color: transparent;
             font-family: $font-arial;
             font-size: 16px;
             color: #fff;
-            border: 1px solid transparent;
+            border: 1px solid $gray-border;
             border-radius: 0;
             transition: .35s ease-in-out all;
 
             &:focus,
             &:focus-visible,
             &:focus-within {
-                border: 1px solid $yellow;
+                border: 1px solid $brand-color
             }
         }
     }
@@ -75,6 +102,15 @@
             &:hover {
                 background-color: $yellow;
             }
+        }
+    }
+
+    .item-submit-purple .field-submit input {
+        color: #fff;
+        background-color: $brand-color;
+
+        &:hover {
+            background-color: $yellow;
         }
     }
 
@@ -93,6 +129,22 @@
     @media (max-width: 575px) {
         .field-submit input {
             width: 100%;
+        }
+    }
+}
+
+.contact-form-dark form {
+    .item-input span {
+        input {
+            background-color: $brand-color;
+            border: 1px solid transparent;
+            transition: .35s ease-in-out all;
+
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+                border: 1px solid $yellow;
+            }
         }
     }
 }
