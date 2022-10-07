@@ -1,0 +1,98 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the contact form component.
+// -----------------------------------------------------------------------------
+
+.contact-form form {
+    br {
+        display: none;
+    }
+
+    .form-item + .form-item {
+        margin-top: 10px;
+    }
+
+    // .required-asterisk {
+    //     color: #dc3232;
+    // }
+
+    label {
+        display: flex;
+        display: none;
+        font-family: $font-arial;
+        font-size: 18px;
+        color: #fff;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-family: $font-arial-italic;
+        color: $mid-grey;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        font-family: $font-arial-italic;
+        color: $mid-grey;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        font-family: $font-arial-italic;
+        color: $mid-grey;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        font-family: $font-arial-italic;
+        color: $mid-grey;
+    }
+
+    .item-input span {
+        display: flex;
+
+        input {
+            display: flex;
+            width: 100%;
+            max-width: 100%;
+            padding: 10px 12px;
+            background-color: $brand-color;
+            font-family: $font-arial;
+            font-size: 16px;
+            color: #fff;
+            border: 1px solid transparent;
+            border-radius: 0;
+            transition: .35s ease-in-out all;
+
+            &:focus,
+            &:focus-visible,
+            &:focus-within {
+                border: 1px solid $yellow;
+            }
+        }
+    }
+
+    .field-submit {
+        input {
+            @extend .button-white;
+            padding: 12px 30px;
+            font-size: 16px;
+
+            &:hover {
+                background-color: $yellow;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .item-input span {
+            input {
+                font-size: 14px;
+            }
+        }
+
+        .field-submit input {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .field-submit input {
+            width: 100%;
+        }
+    }
+}

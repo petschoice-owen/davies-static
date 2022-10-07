@@ -5,18 +5,59 @@
 // -----------------------------------------------------------------------------
 
 .page-stockists {
-    .wrapper-stockist-form {
-        margin-top: 30px;
+    .stockists {
+        .wrapper-stockist-form {
+            margin-top: 30px;
+        }
+    
+        .stockist-form {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            color: #fff;
+            background-color: $violet;
+            border-radius: 5px;
+        }
+
+        h3 {
+            color: #fff;
+        }
+
+        .text,
+        .form {
+            width: 100%;
+            max-width: 50%;
+        }
+
+        .text {
+            padding-right: 15px;
+            
+            * + * {
+                margin-top: 10px;    
+            }
+        }
+
+        .form {
+            padding-left: 15px;
+        }
     }
 
-    .stockist-form {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    @media (max-width: 767px) {
+        .stockists {
+            .stockist-form {
+                padding: 25px 20px;
+            }
+            
+            .text {
+                max-width: 100%;
+                padding-right: 0;
+            }
 
-    .text,
-    .form {
-        width: 100%;
-        max-width: 50%;
+            .form {
+                max-width: 100%;
+                margin-top: 25px;
+                padding-left: 0;
+            }
+        }
     }
 }
