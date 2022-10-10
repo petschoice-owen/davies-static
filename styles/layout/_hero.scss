@@ -7,6 +7,16 @@
 .hero-title {
     padding: 50px 0;
 
+    h1, h2, h3, h4, h5, h6 {
+        & + .description {
+            margin-top: 20px;
+        }
+    }
+
+    .description {
+        text-align: center;
+    }
+
     @media (max-width: 767px) {
         padding: 35px 0;
     }
