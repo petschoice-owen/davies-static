@@ -1,0 +1,192 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the testimonials page.
+// -----------------------------------------------------------------------------
+
+.page-testimonials {
+    .testimonials {
+        .item-testimonial {
+            color: #fff;
+
+            &:nth-child(odd) {
+                background-color: $brand-color;
+
+                .text {
+                    padding-left: 20px;
+                }
+
+                .image {
+                    padding-right: 20px;
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: $violet;
+
+                .text {
+                    order: 1;
+                    padding-right: 20px;
+                }
+
+                .image {
+                    order: 2;
+                }
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        .wrapper-column {
+            display: flex;
+            width: 100%;
+        }
+
+        .image {
+            max-width: 40%;
+            justify-content: center;
+
+            .image-holder {
+                display: flex;
+                align-items: center;
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .text {
+            flex-direction: column;
+            max-width: 60%;
+            margin-top: 0;
+
+            .quote {
+                position: relative;
+                padding: 60px 20px 10px 0;
+                font-family: $font-adelle;
+                font-size: 24px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    background: url(../assets/images/icon-quote.png) no-repeat center/contain;
+                }
+            }
+
+            .author {
+                position: relative;
+                padding-left: 60px;
+                margin-top: 0;
+                font-family: $font-adelle-bold;
+                font-size: 20px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    width: 40px;
+                    height: 4px;
+                    margin: auto;
+                    background-color: $bright-yellow;
+                }
+
+                .location {
+                    font-family: $font-adelle;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .testimonials {
+            .item-testimonial:nth-child(odd) {
+                .image {
+                    padding-right: 10px;
+                }
+            }
+
+            .text {
+                .quote {
+                    padding-top: 55px;
+                    font-size: 22px;
+
+                    &::before {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+
+                .author {
+                    padding-left: 55px;
+                    font-size: 18px;
+
+                    &::before {
+                        width: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .testimonials {
+            .item-testimonial {
+                &:nth-child(even) {
+                    .image {
+                        order: 1;
+                    }
+
+                    .text {
+                        order: 2;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    .text {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .wrapper-column {
+                max-width: 100%;
+            }
+
+            .image {
+                img {
+                    border-radius: 5px;
+                }
+            }
+
+            .text {
+                margin-top: 30px;
+                
+                .quote {
+                    padding-right: 0;
+                }
+
+                .author {
+                    font-size: 18px;
+
+                    &::before {
+                        width: 40px;
+                        height: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
