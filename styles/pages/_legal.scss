@@ -1,0 +1,23 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the legal pages.
+// -----------------------------------------------------------------------------
+
+.page-legal {
+    .content-section {
+        * {
+            color: $text-color;
+        }
+        
+        ul, ol {
+            li + li {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        
+    }
+}
