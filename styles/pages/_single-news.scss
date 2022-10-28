@@ -1,0 +1,113 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the single news page.
+// -----------------------------------------------------------------------------
+
+.page-single-news {
+    .back {
+        padding-bottom: 30px;
+
+        a {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            padding-left: 17px;
+            font-size: 16px;
+            font-family: $font-adelle-bold;
+            text-decoration: underline;
+
+            &::before {
+                content: "<";
+                position: absolute;
+                top: -4px;
+                left: 0;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .single-news {
+        padding: 50px 0;
+
+        .featured-image {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 30px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .date {
+            padding-bottom: 10px;
+            font-size: 15px;
+            color: $brand-color;
+        }
+
+        .title {
+            padding-bottom: 15px;
+            font-size: 30px;
+            font-weight: 600;
+            color: $brand-color;
+        }
+    }
+
+    .article-content {
+        * + * {
+            margin-top: 15px;
+        }
+
+        a {
+            font-family: $font-adelle-bold;
+            color: $brand-color;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+  
+    @media (max-width: 1199px) {
+        .single-news {
+            .title {
+                font-size: 28px;
+            }
+
+            .date {
+                font-size: 14px;
+            }
+        }
+    }
+  
+    @media (max-width: 767px) {
+        .single-news {
+            padding: 35px 0;
+
+            .back {
+                padding-bottom: 20px;
+
+                a {
+                    font-size: 14px;
+
+                    &::before {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .featured-image {
+                padding-bottom: 20px;
+            }
+
+            .date {
+                font-size: 12px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+        }
+    }
+}
